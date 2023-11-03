@@ -27,11 +27,11 @@ L’application Symfony que vous allez développer est destiné à un usage inte
 
 - Utiliser la version LTS de Symfony/PHP
 
-- Implémenter un élément d’écoute permettant l’historisation des modifications
+- Implémenter un élément d’écoute permettant l’historisation des modifications [❌]
 
-- Implémenter le nécessaire pour la génération d’un document PDF
+- Implémenter le nécessaire pour la génération d’un document PDF [🔄]
 
-- Réaliser l’intégration minimale mais responsive de l’interface
+- Réaliser l’intégration minimale mais responsive de l’interface [🔄]
 
 ### Les + :
 
