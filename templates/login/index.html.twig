@@ -1,0 +1,16 @@
+{# templates/login/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <form action="{{ path('app_login') }}" class="form" method="post">
+        {# I want a bootstrap form #}
+        <label for="username">Email:</label>
+        <input type="text" id="email" name="email">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="_password">
+
+
+        <button type="submit">login</button>
+    </form>
+{% endblock %}

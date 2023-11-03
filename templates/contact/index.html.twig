@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Bienvenue dans votre interface utilisateur de gestion des contacts clients</h1>
+
+    <p>Vous pouvez ajouter, modifier ou supprimer des contacts clients.</p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Email</th>
+                <th scope="col">Téléphone</th>
+                <th scope="col">Interactions</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contacts %}
+            <tr>
+                <td>{{ contact.lastname }}</td>
+                <td>{{ contact.firstname }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.cellphone }}</td>
+                <td>{# TBD #}</td>
+                <td>
+                    {# <a ref="{{ path('contact_show', {'id': contact.id}) }}">Voir</a>#}
+                    {# <a href="{{ path('contact_edit', {'id': contact.id}) }}">Modifier</a>#}
+                    {# <a href="{{ path('contact_delete', {'id': contact.id}) }}">Supprimer</a>#}
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="8">Aucun contact trouvé</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div>
+        <a href="{{ path('app_contact_new') }}">Créer un nouveau contact</a>
+    </div>
+</div>
+{% endblock %}

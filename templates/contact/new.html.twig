@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <h1>Register</h1>
+
+    {{ form_errors(contactForm) }}
+
+    {{ form_start(contactForm) }}
+        {{ form_row(contactForm.lastname) }}
+        {{ form_row(contactForm.firstname) }}
+        {{ form_row(contactForm.email) }}
+        {{ form_row(contactForm.cellphone) }}
+        {{ form_row(contactForm.type) }}
+    {{ form_end(contactForm) }}
+{% endblock %}
